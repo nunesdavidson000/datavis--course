@@ -1,8 +1,8 @@
+## Aula do dia 04/09/2019
+
+[notebook.html](d3_intro/notebook.html)<br>
+
 ## Aula do dia 02/09/2019
-[indexBarra1.html](d3_intro/barra1.html)<br>
-[indexBarra2.html](d3_intro/barra2.html)<br>
-[indexBarra3.html](d3_intro/barra3.html)<br>
-[indexBarra4.html](d3_intro/barra4.html)<br>
 [index01.html](basic/index01.html)<br>
 [index01.html](basic/index01.html)<br>
 [index02.html](basic/index02.html)<br>
