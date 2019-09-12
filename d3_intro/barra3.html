@@ -1,0 +1,49 @@
+<!DOCTYPE html lang="pt-br">
+<meta charset="utf-8">
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="exercicio">
+   <p>Célula html</p>
+</div>`
+
+ <div id="barraTres">
+   <p>Célula html</p>
+</div>`
+
+d3.select("#barraTres")
+  barras3 = {
+    const width = 600
+    const height = 400
+    // DOM.svg() é um método específico do Observable criar elemento DOM SVG. 
+    const svg = d3.select(DOM.svg(width, height))
+    const dados = dataset
+
+    svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)
+      .data(dados) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+      .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+        .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado
+        .attr('x', 1) // Configura a posição x de acordo com o índice do vetor // sempre o x comeca no 1
+        .attr('y', (d, i) => i * 30 + 20)   // Configura a posição y de cada barra 
+        .attr('width', (d) => d.despesa * 2) //Configura a largura de cada barra //quem cresce eh o y
+        .attr('height', 20)
+        .attr('fill', "DarkCyan") // Configura a cor de preenchimento de cada barra
+
+    svg.selectAll('text')
+      .data(dados) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+      .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+        .append('text')
+        .text((d) => d.despesa)
+         //.text((d) => d.categoria)
+        .attr('x', (d) => d.despesa * 2 + 15)
+        .attr('y', (d,i) => i * 30 + 20 + 15) // Configura a posição y de cada barra // 15 centraliza o numero
+        .attr('font-family','sans-serif')
+        .attr('font-size','14px')
+        .attr('text-anchor','middle')
+    // Once we append the vis elments to it, we return the DOM element for Observable to display above.
+    return svg.node()
+  }
+
+    </body>
+</html>

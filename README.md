@@ -1,5 +1,9 @@
 ## Aula do dia 02/09/2019
-
+[indexBarra1.html](d3_intro/barra1.html)<br>
+[indexBarra2.html](d3_intro/barra2.html)<br>
+[indexBarra3.html](d3_intro/barra3.html)<br>
+[indexBarra4.html](d3_intro/barra4.html)<br>
+[index01.html](basic/index01.html)<br>
 [index01.html](basic/index01.html)<br>
 [index02.html](basic/index02.html)<br>
 [index03.html](basic/index03.html)<br>
@@ -10,6 +14,7 @@
 [index08.html](basic/index08.html)<br>
 [index09.html](basic/index09.html)<br>
 [index10.html](basic/index10.html)<br>
+
 
 ---
 
