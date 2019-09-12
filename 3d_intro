@@ -1,0 +1,192 @@
+<div id="exercicio">
+   <p>Célula html</p>
+</div>`
+
+{// parenteses antes e depois do d3 selecao de objeto
+  d3.select("#exercicio")// seleciona o objeto exercicio
+    .append("div")//cria um objeto div
+    .attr("id","newDiv")//no atributo id = newDiv
+    .attr("x", "30")
+    .style("border","1px black solid") //cria uma borda = um pixel preto solida
+    .style("background-color","LightYellow") // cria background = amarelo claro
+    .style("font-size","24px")// muda a fonto = 24 pixels
+    .append("p")// cira novo elemento no exercicio
+    .text(" Novo parágrafo!"); // coloca esse nome
+}
+
+<div id="barraUm">
+   <p>Célula html</p>
+</div>`
+
+d3.select("#barraUm")
+
+  barras1 = {//elemento barra
+    const width = 700 //criou constante
+    const height = 200
+    // DOM.svg() é um método específico do Observable // criar svg = selecione  um elemento DOM /  SVG  (constantes))
+    const svg = d3.select(DOM.svg(width, height))  // sao duas funcoes por isso nao tem aspas. Cria o svg e depois seleciona
+    const arrayOfNumbers = [10, 15, 30, 50, 80, 65, 55, 30, 20, 10, 8] //simples array
+
+    svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)//nao tem retang
+    //o que for retangulo dentro do svg foi selecionado, mas nao tem retangulo
+
+      .data(arrayOfNumbers) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+    //eh uma funcao por isso nao tem aspas
+
+
+      .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+    //junta dados de entrada    a    elementos  do append retangulo 
+
+        .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado // cria um retangulo para cada dado
+        .attr('x', (d, i) => i * 30 + 20) // Configura a posição x de acordo com o índice do vetor //+20 nao cola no inicio
+        //Arrow funcition   parametros de entrada             =>       resultados da expressao               para o x atributo
+        // (d) representacao dos dados       (i) indice do array
+
+        .attr('y', (d) => height - d*2) // Configura a posição y de cada barra  //coloca de cabeca para baixo
+        .attr('width', 20) //Configura a largura de cada barra
+        .attr('height', (d) => d * 2) // Configura a altura de cada barra // Coloca *2 para preencher mais o espaço do grafico
+        .attr('fill', "DarkSlateGrey") // Configura a cor de preenchimento de cada barra
+
+    svg.selectAll('text') //elementos de texto do grafico selecionados.   Do DOM o objeto svg do tipo texto
+      .data(arrayOfNumbers) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+      .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+        .append('text')
+        .text((d) => d)// os valores do array sao os valores do texto // funcao para percorrer todos os valores
+        .attr('x', (d,i) => i * 30 + 20 + 10) // + 10 para centralizar o texto
+        .attr('y', (d) => height-d*2-3) // Configura a posição y de cada barra // fica o texto mais a cima da barra
+        .attr('font-family','sans-serif')
+        .attr('font-size','14px')
+        .attr('text-anchor','middle') //alinhamento centralizado
+    // Once we append the vis elments to it, we return the DOM element for Observable to display above.
+    return svg.node() //retornar os elementos do dom   node?
+  }
+  
+  
+  <div id="barraDois">
+   <p>Célula html</p>
+</div>`
+
+d3.select("#barraDois")
+barras2 = {// bem parecido com o anterior
+  const width = 700
+  const height = 200
+  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. 
+  const svg = d3.select(DOM.svg(width, height))  
+  
+  const dataset = [ 
+        {height: 10, color: 23},{height: 15, color: 33},
+        {height: 30, color: 40},{height: 50, color: 60},
+        {height: 80, color: 22},{height: 65, color: 10},
+        {height: 55, color: 5},{height: 30, color: 30},
+        {height: 20, color: 60},{height: 10, color: 90},
+        {height: 8, color: 10}]
+  
+  let colorScale = d3.scaleLinear()// isso foi funcao para definir os limites na escala de cores 0 a 100 degradê de 
+                                   // beje para amarelo
+        .domain([0, 100])
+        .range(["Khaki", "Gold"]); // Escala de cor
+  
+  svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)
+    .data(dataset) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+    .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+      .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado
+      .attr('x', (d, i) => i * 30 + 20) // Configura a posição x de acordo com o índice do vetor // inicio barra 
+      .attr('y', (d) => height - d.height * 2)  // Configura a posição y de cada barra cabeca para baixo 
+  // chama so o atributo do json d.height ja no resultado
+      
+      .attr('width', 20) //Configura a largura de cada barra
+      .attr('height', (d) => d.height * 2)
+      .attr('fill', (d) => colorScale(d.color)) // Configura a cor de preenchimento de cada barra
+ // chama so o atributo color d.color
+  
+  svg.selectAll('text')
+    .data(dataset) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+    .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+      .append('text')
+      .text((d) => d.height)
+      .attr('x', (d,i) => i * 30 + 20 + 10) // 10 centraliza
+      .attr('y', (d) => height-d.height*2-3) // Configura a posição y de cada barra
+      .attr('font-family','sans-serif')
+      .attr('font-size','14px')
+      .attr('text-anchor','middle')
+  
+  // Once we append the vis elments to it, we return the DOM element for Observable to display above.
+  return svg.node()
+}
+
+ <div id="barraTres">
+   <p>Célula html</p>
+</div>`
+
+d3.select("#barraTres")
+  barras3 = {
+    const width = 600
+    const height = 400
+    // DOM.svg() é um método específico do Observable criar elemento DOM SVG. 
+    const svg = d3.select(DOM.svg(width, height))
+    const dados = dataset
+
+    svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)
+      .data(dados) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+      .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+        .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado
+        .attr('x', 1) // Configura a posição x de acordo com o índice do vetor // sempre o x comeca no 1
+        .attr('y', (d, i) => i * 30 + 20)   // Configura a posição y de cada barra 
+        .attr('width', (d) => d.despesa * 2) //Configura a largura de cada barra //quem cresce eh o y
+        .attr('height', 20)
+        .attr('fill', "DarkCyan") // Configura a cor de preenchimento de cada barra
+
+    svg.selectAll('text')
+      .data(dados) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+      .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+        .append('text')
+        .text((d) => d.despesa)
+         //.text((d) => d.categoria)
+        .attr('x', (d) => d.despesa * 2 + 15)
+        .attr('y', (d,i) => i * 30 + 20 + 15) // Configura a posição y de cada barra // 15 centraliza o numero
+        .attr('font-family','sans-serif')
+        .attr('font-size','14px')
+        .attr('text-anchor','middle')
+    // Once we append the vis elments to it, we return the DOM element for Observable to display above.
+    return svg.node()
+  }
+
+ <div id="barraQuatro">
+   <p>Célula html</p>
+ </div>`
+
+    d3.select("#barraQuatro")
+        barras4 = {
+          const width = 600
+          const height = 400
+          // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. 
+          const svg = d3.select(DOM.svg(width, height))
+          //array.sort(d3.ascending) => 2,3,4,6,7,8,10,11,15
+          //const dataset = sorteddata.sort(d3.ascending)  entre os parentes ficam as funcoes. 
+          const dataset = sorteddata.sort(d3.ascending, comparePorDespesa)
+
+          svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)
+            .data(dataset) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+            .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+            .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado
+            .attr('x', 1) // Configura a posição x de acordo com o índice do vetor
+            .attr('y', (d, i) => i * 30 + 20)   // Configura a posição y de cada barra
+            .attr('width', (d) => d.despesa * 2) //Configura a largura de cada barra
+            .attr('height', 20)
+            .attr('fill', "DarkCyan") // Configura a cor de preenchimento de cada barra
+
+          svg.selectAll('text')
+            .data(dataset) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()
+            .enter()// Retorna a parte dos dados que é nova ("entering") e ainda não está vinculada aos elementos DOM
+              .append('text')
+              .text((d) => d.despesa)
+              .attr('x', (d) => d.despesa * 2 + 15)
+              .attr('y', (d,i) => i * 30 + 20 + 15) // Configura a posição y de cada barra
+              .attr('font-family','sans-serif')
+              .attr('font-size','14px')
+              .attr('text-anchor','middle')
+
+
+          // Once we append the vis elments to it, we return the DOM element for Observable to display above.
+          return svg.node()
+        }
