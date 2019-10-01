@@ -1,4 +1,6 @@
+## Aula do dia 23/09/2019
 
+[d3_crossfilter](d3-crossfilter/index.html)<br> 
 
 ## Aula do dia 16/09/2019
 

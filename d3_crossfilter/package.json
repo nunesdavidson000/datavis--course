@@ -1,0 +1,14 @@
+{
+  "name": "dc44101e7217f0cb",
+  "main": "d/dc44101e7217f0cb.js",
+  "version": "527.0.0",
+  "homepage": "https://observablehq.com/d/dc44101e7217f0cb",
+  "author": {
+    "name": "nunesdavidson000",
+    "url": "https://observablehq.com/@nunesdavidson000"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
