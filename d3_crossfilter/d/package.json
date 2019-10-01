@@ -1,0 +1,14 @@
+{
+  "name": "@nunesdavidson000/d3-com-crossfilter-e-dc-js",
+  "main": "d/dc44101e7217f0cb.js",
+  "version": "527.0.0",
+  "homepage": "https://observablehq.com/@nunesdavidson000/d3-com-crossfilter-e-dc-js",
+  "author": {
+    "name": "nunesdavidson000",
+    "url": "https://observablehq.com/@nunesdavidson000"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
