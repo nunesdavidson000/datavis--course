@@ -1,4 +1,4 @@
-// https://observablehq.com/d/dc44101e7217f0cb@527
+// https://observablehq.com/@nunesdavidson000/d3-com-crossfilter-e-dc-js@527
 export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(["md"], function(md){return(

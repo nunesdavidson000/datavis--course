@@ -1,6 +1,6 @@
 # D3 com Crossfilter e DC.js
 
-https://observablehq.com/d/dc44101e7217f0cb@527
+https://observablehq.com/@nunesdavidson000/d3-com-crossfilter-e-dc-js@527
 
 View this notebook in your browser by running a web server in this folder. For
 example:
@@ -21,7 +21,7 @@ Then, import your notebook and the runtime as:
 
 ~~~js
 import {Runtime, Inspector} from "@observablehq/runtime";
-import define from "dc44101e7217f0cb";
+import define from "@nunesdavidson000/d3-com-crossfilter-e-dc-js";
 ~~~
 
 To log the value of the cell named “foo”:
