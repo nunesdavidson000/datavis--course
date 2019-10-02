@@ -1,11 +1,11 @@
 ## Aula do dia 25/09/2019
 
-[d3_crossfilter2](d3_crossfilter/index.html)<br>
+[d3_crossfilter2](d3_crossfilter/crossfilter.html)<br> 
+
 
 ## Aula do dia 23/09/2019
 
-[d3_crossfilter](d3_crossfilter/crossfilter.html)<br> 
-
+[d3_crossfilter](d3_crossfilter/index.html)<br>
 ## Aula do dia 16/09/2019
 
 [scatterplot.html](d3_update/scatterplot.html)<br>
