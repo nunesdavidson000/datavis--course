@@ -1,0 +1,14 @@
+{
+  "name": "17a68fe5cd4a124b",
+  "main": "d/17a68fe5cd4a124b.js",
+  "version": "238.0.0",
+  "homepage": "https://observablehq.com/d/17a68fe5cd4a124b",
+  "author": {
+    "name": "nunesdavidson000",
+    "url": "https://observablehq.com/@nunesdavidson000"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
