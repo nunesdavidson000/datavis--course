@@ -1,0 +1,14 @@
+{
+  "name": "@nunesdavidson000/similar-song-network",
+  "main": "d/3b720025bcefcb62.js",
+  "version": "115.0.0",
+  "homepage": "https://observablehq.com/@nunesdavidson000/similar-song-network",
+  "author": {
+    "name": "nunesdavidson000",
+    "url": "https://observablehq.com/@nunesdavidson000"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
