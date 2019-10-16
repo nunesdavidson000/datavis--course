@@ -1,7 +1,7 @@
 
 ## Aula do dia 09/10/2019
 [d3_network](d3_network/index.html)<br>
-
+[d3_network](d3_network_2/index.html)<br>
 
 ## Aula do dia 30/09/2019
 
