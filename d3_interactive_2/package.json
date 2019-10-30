@@ -1,0 +1,14 @@
+{
+  "name": "@nunesdavidson000/d3-com-crossfilter-e-dc-js-sincronizacao-com-mapa",
+  "main": "f2ecfe86cf766a53@379.js",
+  "version": "379.0.0",
+  "homepage": "https://observablehq.com/@nunesdavidson000/d3-com-crossfilter-e-dc-js-sincronizacao-com-mapa",
+  "author": {
+    "name": "nunesdavidson000",
+    "url": "https://observablehq.com/@nunesdavidson000"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
