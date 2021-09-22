@@ -55,7 +55,11 @@
 [index09.html](basic/index09.html)<br>
 [index10.html](basic/index10.html)<br>
 
+## Exports
 
+
+[exports.html](arq/ceara.csv)<br>
+[exports.html](arq/ceara_tsv.csv)<br>
 ---
 
 Para saber mais sobre a sintaxe markdown, veja [este guia](https://guides.github.com/features/mastering-markdown/).
